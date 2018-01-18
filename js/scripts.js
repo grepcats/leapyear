@@ -3,8 +3,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = parseInt($("input#year-input").val());
-
-    if (userInput % 4 !== 0){
+    if (isNaN(userInput)) {
+      alert("you're such an idiot! don't ever bring that non-numerical crap around here again");
+    } else if (userInput % 4 !== 0){
       alert("get out of here with that non-leap-year garbage");
     } else if (userInput % 400 === 0) {
       alert("this is a leap year, good job buddy");
