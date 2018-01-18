@@ -4,10 +4,14 @@ $(document).ready(function() {
 
     var userInput = parseInt($("input#year-input").val());
 
-    if (userInput % 4 !== 0) {
+    if (userInput % 4 !== 0){
       alert("get out of here with that non-leap-year garbage");
+    } else if (userInput % 400 === 0) {
+      alert("this is a leap year, good job buddy");
+    } else if (userInput % 100 === 0) {
+      alert("this is not a leap year, dummy stupid head");
     } else if (userInput % 4 === 0) {
-      alert("this could possibly be a leap year")
+      alert("this is a leap year, maybe even in the future");
     }
   });
 
